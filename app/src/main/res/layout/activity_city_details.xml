@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".CityDetails">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002">
+
+        <ImageView
+            android:id="@+id/IV_city_details_weather"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/cloud" />
+
+        <TextView
+            android:id="@+id/TV_city_details_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="14 C"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/IV_city_details_map"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+    <ImageView
+        android:id="@+id/IV_city_details_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_round_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/TV_city_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="City Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IV_city_details_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_city_details_name"
+        app:layout_constraintStart_toEndOf="@+id/TV_city_details_name"
+        app:layout_constraintTop_toTopOf="@+id/TV_city_details_name"
+        app:srcCompat="@drawable/ic_round_star_outline_24" />
+
+    <ImageView
+        android:id="@+id/IV_city_details_loved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_city_details_name"
+        app:layout_constraintEnd_toStartOf="@+id/TV_city_details_name"
+        app:layout_constraintTop_toTopOf="@+id/TV_city_details_name"
+        app:srcCompat="@drawable/ic_round_favorite_border_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
